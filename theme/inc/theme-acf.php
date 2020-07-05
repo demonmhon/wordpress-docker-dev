@@ -6,7 +6,7 @@
  */
 
 if (function_exists('acf_add_options_page')) {
-    acf_add_options_page();
+  acf_add_options_page();
 }
 
 function theme_acf_init() {
@@ -14,14 +14,14 @@ function theme_acf_init() {
 }
 
 function my_acf_json_load_point( $paths ) {
-    unset($paths[0]);
-    $paths[] = get_theme_file_path() . '/acf';
-    return $paths;
+  unset($paths[0]);
+  $paths[] = get_theme_file_path() . '/acf';
+  return $paths;
 }
 
 function my_acf_json_save_point( $path ) {
-    $path = get_theme_file_path() . '/acf';
-    return $path;
+  $path = get_theme_file_path() . '/acf';
+  return $path;
 }
 
 add_action('acf/init', 'theme_acf_init');
