@@ -1,0 +1,16 @@
+// Sidebar / Widgets
+
+.layout__content__col--side {
+  .wp-widget {
+    &__widget {}
+
+    &__title {}
+    &__title-text {}
+
+    &__body {
+      ul {}
+      li {}
+      a {}
+    }
+  }
+}

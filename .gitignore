@@ -1,0 +1,28 @@
+# Dependency directory
+node_modules
+
+# Gulp cache
+.gulp-scss-cache
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# dotenv environment variables file
+.env
+
+# DB
+.db
+
+# Themes
+themes/*
+themes/index.php
+!themes/website

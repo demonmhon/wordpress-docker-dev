@@ -1,0 +1,40 @@
+// Variables
+
+// Colors
+$bg-color:                 #fff;
+$primary:                  #455A64;
+$primary-dark:             #263238;
+$primary-light:            $primary;
+$secondary:                #7e57c2;
+$secondary-dark:           #311b92;
+$secondary-light:          $secondary;
+$accent:                   #f44336;
+$accent-dark:              #b71c1c;
+$accent-light:             $secondary;
+
+$primary-contrast:         #fff;
+$secondary-contrast:       #fff;
+$accent-contrast:          #fff;
+
+$text-color:               #333;
+$heading-color:            #333;
+
+// WordPress Admin
+$wp-admin-bar:             32px;
+$wp-admin-bar-xs:          46px;
+
+// Layouts
+// Font and color
+$base-font-size:           13px;
+$base-color:               #212121;
+$link-color:               $accent;
+$border-line-color:        #eee;
+
+// Header
+$header-height:            0;
+$header-height-xs:         0;
+$header-navbar-bg-color:   $primary-dark;
+
+// Transitions
+$transition-duration:      .25s;
+$transition-duration-slow: .4s;

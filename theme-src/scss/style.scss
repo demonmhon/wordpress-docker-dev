@@ -1,0 +1,19 @@
+// Main import files
+
+@import 'vendors';
+@import 'variables';
+@import 'mixins';
+
+// Components
+@import 'components/fonts';
+@import 'components/forms';
+@import 'components/primary';
+@import 'components/sidebar';
+
+// Layouts
+@import 'layouts/main';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Pages
+@import 'pages/front-page';

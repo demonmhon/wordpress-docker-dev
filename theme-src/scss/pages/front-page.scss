@@ -1,0 +1,11 @@
+// Page: Front page
+
+body.home {
+  .layout__content {}
+
+  .front-page {
+    &__content {
+      &--intro {}
+    }
+  }
+}

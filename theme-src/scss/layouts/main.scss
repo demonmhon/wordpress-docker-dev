@@ -1,0 +1,41 @@
+// Main layout
+
+html {}
+
+body {
+  font-size: $base-font-size;
+  color: $base-color;
+  background-color: $bg-color;
+}
+a {}
+h1 {}
+h2 {}
+h3 {}
+
+// Color palette - text and background
+$color-palette: (
+  'text': $text-color,
+  'heading': $heading-color,
+  'primary': $primary,
+  'primary-dark': $primary-dark,
+  'primary-light': $primary-light,
+  'secondary': $secondary,
+  'secondary-dark': $secondary-dark,
+  'secondary-light': $secondary-light,
+  'accent': $accent,
+  'accent-dark': $accent-dark,
+  'accent-light': $accent-light
+);
+@each $name, $value in $color-palette {
+  .color-#{$name} {
+    color: $value !important;
+  }
+  .bg-#{$name} {
+    background-color: $value !important;
+  }
+}
+
+// WordPress Customization
+#wpadminbar {
+  position: fixed !important;
+}

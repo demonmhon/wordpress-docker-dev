@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Design Guideline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.min.css" />
+    <style>
+        body {
+    margin: 0;
+    padding: 1rem;
+}
+section {
+    margin-bottom: 3rem;
+}
+section header {
+    margin-bottom: 1rem;
+}
+section header h1 {
+    color: #333333;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    display: flex;
+    flex-direction: row;
+}
+section header h1::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    margin: auto 0 auto 10px;
+}
+.color-palette-row {
+    margin-bottom: 0.75rem;
+}
+.color-palette-item {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    position: relative;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 0.75rem;
+    margin-right: 0.75rem;
+}
+.color-palette-item .color,
+.color-palette-item .variant-1,
+.color-palette-item .variant-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.color-palette-item .variant-1,
+.color-palette-item .variant-2 {
+    left: auto;
+    width: 15px;
+}
+.color-palette-item .variant-2 {
+    right: 15px;
+}
+.color-palette-item .meta {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem 1rem;
+}
+.color-palette-item .meta span {
+    display: block;
+}
+.color-palette-item .type {
+    font-weight: bold;
+}
+.font-sample-container {
+    margin-bottom: 0.75rem;
+}
+.font-sample-item {
+    display: inline-block;
+    width: 200px;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+.font-sample-item.gray {
+    color: #ffffff;
+    background-color: #888888;
+}
+.font-sample-item.dark {
+    color: #ffffff;
+    background-color: #000000;
+}
+.font-sample-item span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.font-sample-item .header {
+    font-size: 2rem;
+}
+.font-sample-group {
+    margin-bottom: 1.5rem;
+}
+.code {
+    font-family: monospace;
+}
+</style>
+</head>
+
+<body style="background: #fafafa;">
+    <section>
+        <header>
+            <h1>Color Palette</h1>
+        </header>
+        <div>
+            <div class="color-palette">
+                <div class="color-palette-row">
+                    <div class="color-palette-item">
+                        <div class="color bg-text"></div>
+                        <div class="meta">
+                            <span class="type">Text Color</span>
+                            <span class="code">#7d8693</span>
+                        </div>
+                    </div>
+                    <div class="color-palette-item">
+                        <div class="color bg-heading"></div>
+                        <div class="meta">
+                            <span class="type">Heading Color</span>
+                            <span class="code">#333333</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-palette-row">
+                    <div class="color-palette-item">
+                        <div class="color bg-primary"></div>
+                        <div class="variant-1 bg-primary-dark"></div>
+                        <div class="meta">
+                            <span class="type">Primary</span>
+                            <span class="code">#f58030, #e36e1e</span>
+                        </div>
+                    </div>
+                    <div class="color-palette-item">
+                        <div class="color bg-primary-dark"></div>
+                        <div class="meta">
+                            <span class="type">Primary Dark</span>
+                            <span class="code">#e36e1e</span>
+                        </div>
+                    </div>
+                    <div class="color-palette-item">
+                        <div class="color bg-primary-light"></div>
+                        <div class="meta">
+                            <span class="type">Primary Light</span>
+                            <span class="code">#ffc27a</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-palette-row">
+                    <div class="color-palette-item">
+                        <div class="color bg-secondary"></div>
+                        <div class="variant-1 bg-secondary-dark"></div>
+                        <div class="meta">
+                            <span class="type">Secondary</span>
+                            <span class="code">#777, #3e3e3e</span>
+                        </div>
+                    </div>
+                    <div class="color-palette-item">
+                        <div class="color bg-secondary-dark"></div>
+                        <div class="meta">
+                            <span class="type">Secondary Dark</span>
+                            <span class="code">#3e3e3e</span>
+                        </div>
+                    </div>
+                    <div class="color-palette-item">
+                        <div class="color bg-secondary-light"></div>
+                        <div class="meta">
+                            <span class="type">Secondary Light</span>
+                            <span class="code">#6d6d6d</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-palette-row">
+                    <div class="color-palette-item">
+                        <div class="color bg-accent"></div>
+                        <div class="variant-1 bg-accent-dark"></div>
+                        <div class="meta">
+                            <span class="type">Accent</span>
+                            <span class="code">#ca3d96, #9c1d5e</span>
+                        </div>
+                    </div>
+                    <div class="color-palette-item">
+                        <div class="color bg-accent-dark"></div>
+                        <div class="meta">
+                            <span class="type">Accent Dark</span>
+                            <span class="code">#9c1d5e</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <header>
+            <h1>Typography</h1>
+        </header>
+        <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec orci in arcu ultrices accumsan a at
+                lacus. Fusce orci massa, iaculis sed nulla eu, porttitor accumsan magna. Sed eu felis feugiat felis
+                elementum iaculis et quis dui. Duis ornare enim ut semper luctus. Sed pellentesque dolor ac ligula
+                euismod, a efficitur nisi dignissim. Morbi euismod felis varius orci sagittis tincidunt. Duis vitae
+                nibh nec magna venenatis posuere ac non orci. Morbi hendrerit cursus ex eget maximus. Curabitur non dui
+                sit amet urna molestie scelerisque. Pellentesque vestibulum non magna ut rutrum. Donec nec est vitae
+                enim rutrum dictum at vel diam. Proin commodo ligula risus, id tempor ex facilisis ut. Mauris magna
+                eros, rhoncus eget accumsan id, pharetra rutrum erat. Donec ut semper erat, ac lobortis nisl.</p>
+        </div>
+        <div>
+            <div class="font-sample-container">
+                <div class="font-sample-item">
+                    <div class="font-sample-group">
+                        <span class="header">Regular</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                    <div class="font-sample-group" style="font-weight:500">
+                        <span class="header">Medium</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                    <div class="font-sample-group" style="font-weight:700">
+                        <span class="header">Bold</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                </div>
+                <div class="font-sample-item gray">
+                    <div class="font-sample-group">
+                        <span class="header">Regular</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                    <div class="font-sample-group" style="font-weight:500">
+                        <span class="header">Medium</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                    <div class="font-sample-group" style="font-weight:700">
+                        <span class="header">Bold</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                </div>
+                <div class="font-sample-item dark">
+                    <div class="font-sample-group">
+                        <span class="header">Regular</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                    <div class="font-sample-group" style="font-weight:500">
+                        <span class="header">Medium</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                    <div class="font-sample-group" style="font-weight:700">
+                        <span class="header">Bold</span>
+                        <span>AaBbCcDd</span>
+                        <span>1234567890</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <header>
+            <h1>Button</h1>
+        </header>
+        <div>
+            <div>
+                <button class="the-btn the-btn-primary">Primary Button</button>
+                <button class="the-btn the-btn-secondary">Secondary Button</button>
+                <button class="the-btn the-btn-text">Text Button</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <header>
+            <h1>Radio Button</h1>
+        </header>
+        <div>
+            <div>
+                <form>
+                    <label class="wf-btn-radio" for="radio-1">
+                        <input type="radio" name="radio" id="radio-1" value="0">
+                        <span>Option 1</span>
+                    </label>
+                    <label class="wf-btn-radio" for="radio-2">
+                        <input type="radio" name="radio" id="radio-2" value="0">
+                        <span>Option 2</span>
+                    </label>
+                    <label class="wf-btn-radio" for="radio-3">
+                        <input type="radio" name="radio" id="radio-3" value="0">
+                        <span>Option 3</span>
+                    </label>
+                    <label class="wf-btn-radio" for="radio-4">
+                        <input type="radio" name="radio" id="radio-4" value="0">
+                        <span>Option 4</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Roboto:400,500,700']
+            }
+        });
+    </script>
+</body>
+
+</html>

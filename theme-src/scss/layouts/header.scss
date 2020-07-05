@@ -1,0 +1,55 @@
+// Header layout
+
+html {
+  &.show-nav {
+    .layout__header {
+      z-index: 9901 !important;
+
+      .navbar-header {
+      }
+
+      &::before {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.layout__header {
+  .navbar,
+  .nav-menu--main,
+  .site-search {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .navbar {
+    margin: 0;
+    &-toggle {}
+
+    &-brand {
+      height: auto;
+      .logo {}
+
+      .text {
+        display: none;
+      }
+    }
+    .icon-bar {}
+  }
+
+  .nav-menu--main {
+    .navbar-nav {}
+
+    .current-menu-ancestor,
+    .current-menu-item {}
+  }
+
+  .site-search {
+  }
+
+  @include media-breakpoint-up(sm) {
+    // @media (min-width: $sm) styles
+  }
+}

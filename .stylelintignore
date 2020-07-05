@@ -1,0 +1,3 @@
+node_modules/
+theme/assets-src/scss/vendor/**/*.scss
+theme/assets-src/scss/vendor/**/*.css

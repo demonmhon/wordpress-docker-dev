@@ -1,0 +1,45 @@
+// Primary content
+
+.layout__content__col--primary {
+  a {}
+  h1 {}
+  h2 {}
+  h3 {}
+}
+
+.section {
+
+}
+
+.content-page {
+  &--single {}
+  &--category {}
+}
+
+.post-item {
+  &--full-content {}
+  &--brief {}
+  &--thumbnail {}
+
+  &__thumbnail {
+    &__img-mask {}
+    &__img-img {}
+  }
+
+  &__info {
+    &-item {}
+  }
+
+  &__data {
+    &--title {
+      &-text {}
+    }
+    &--date {}
+    &--tag {}
+    &--content {}
+  }
+}
+
+.category {
+  &__post-list {}
+}
