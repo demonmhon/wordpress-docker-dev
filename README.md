@@ -105,3 +105,10 @@ npm start
 ```
 
 Gulp will watch the file on `/theme-src` to compile to JS and CSS.
+
+
+## Bundle
+
+* [FontAwesome 5](https://fontawesome.com/)
+* [Bootstrap 4](https://getbootstrap.com/)
+* [Hamburgers ](https://jonsuh.com/hamburgers/)
