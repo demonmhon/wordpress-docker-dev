@@ -12,7 +12,7 @@
               <?php if (have_posts()) : ?>
               <div class="category__post-list">
                 <?php while (have_posts()) : the_post(); ?>
-                  <?php get_template_part('template-parts/category', 'list-item') ?>
+                  <?php get_template_part('template-parts/category', 'post-item') ?>
                 <?php endwhile; ?>
               </div>
               <?php endif ?>

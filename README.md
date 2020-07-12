@@ -74,6 +74,8 @@ The theme might not displayed properly without follow plugins:
 
 Open the `/theme` and `/theme-src`. Then modify the files as needed.
 
+The `/theme-src` designed for source of assets which doesn't required on production. So, they separated from theme.
+
 Following the [WordPress Developer Handbook](https://developer.wordpress.org/themes/basics/) for theme development. For the the theme's asset files (CSS, JavaScript), [Node.js 10.x+](https://nodejs.org/) is required.
 
 ### Plugins

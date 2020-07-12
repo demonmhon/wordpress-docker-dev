@@ -1,0 +1,46 @@
+.post-item {
+  &--full-content {
+
+  }
+
+  &--summary {
+
+  }
+
+  &__post-title {
+    &-text {
+
+    }
+  }
+
+  &__thumbnail {
+    &__img-mask {
+
+    }
+    &__img-img {
+
+    }
+  }
+
+  &__info-item {
+    &--date {
+
+    }
+
+    &--tag {
+
+    }
+  }
+
+  &__content {
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__excerpt {
+
+  }
+}
