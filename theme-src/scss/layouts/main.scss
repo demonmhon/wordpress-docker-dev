@@ -39,3 +39,14 @@ $color-palette: (
 #wpadminbar {
   position: fixed !important;
 }
+
+.layout__site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#layout__content {
+  flex: 1;
+}

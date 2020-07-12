@@ -25,7 +25,7 @@ const comment = [
 const assetsConfig = {
   srcJs: './theme-src/js',
   srcScss: './theme-src/scss',
-  distDir: './themes/website/assets',
+  distDir: './theme/assets',
 };
 
 function logError(err) {

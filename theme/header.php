@@ -27,7 +27,7 @@ if (function_exists('get_field')) {
     <div class="layout__header-container">
       <nav class="navbar navbar-expand-md">
         <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu--main" aria-controls="nav-menu--main" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <div class="hamburger hamburger--slider">

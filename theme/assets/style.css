@@ -1,5 +1,5 @@
 /**
- * demonmhon-wordpress-starter 1.0.0
+ * wordpress-docker-dev 1.0.0
  * 
  *
  * @version v1.0.0
@@ -11772,12 +11772,12 @@ a.text-dark:hover, a.text-dark:focus {
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-    transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+    transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
 }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
     opacity: 0;
-    transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+    transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
 }
 
 .hamburger--minus.is-active .hamburger-inner::before {
@@ -11859,7 +11859,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .hamburger--spin .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 
 .hamburger--spin .hamburger-inner::after {
@@ -11875,7 +11875,7 @@ a.text-dark:hover, a.text-dark:focus {
 .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
 .hamburger--spin.is-active .hamburger-inner::after {
@@ -11893,7 +11893,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .hamburger--spin-r .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 
 .hamburger--spin-r .hamburger-inner::after {
@@ -11909,7 +11909,7 @@ a.text-dark:hover, a.text-dark:focus {
 .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
 .hamburger--spin-r.is-active .hamburger-inner::after {
@@ -12066,7 +12066,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .hamburger--squeeze .hamburger-inner::before {
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
 
 .hamburger--squeeze .hamburger-inner::after {
@@ -12082,7 +12082,7 @@ a.text-dark:hover, a.text-dark:focus {
 .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
 
 .hamburger--squeeze.is-active .hamburger-inner::after {
@@ -12263,15 +12263,26 @@ body {
 }
 
 .color-accent-light {
-    color: #7e57c2 !important;
+    color: #f44336 !important;
 }
 
 .bg-accent-light {
-    background-color: #7e57c2 !important;
+    background-color: #f44336 !important;
 }
 
 #wpadminbar {
     position: fixed !important;
+}
+
+.layout__site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#layout__content {
+    flex: 1;
 }
 
 html.show-nav .layout__header {
