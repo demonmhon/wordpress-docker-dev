@@ -1,4 +1,8 @@
-// Main layout
+/*
+ * Main layout
+ * For global styles
+ */
+
 
 html {}
 
@@ -7,14 +11,19 @@ body {
   color: $base-color;
   background-color: $bg-color;
 }
-a {}
+
+a {
+  color: $link-color;
+}
+
 h1 {}
+
 h2 {}
+
 h3 {}
 
 // Color palette - text and background
-$color-palette: (
-  'text': $text-color,
+$color-palette: ('text': $text-color,
   'heading': $heading-color,
   'primary': $primary,
   'primary-dark': $primary-dark,
@@ -24,13 +33,15 @@ $color-palette: (
   'secondary-light': $secondary-light,
   'accent': $accent,
   'accent-dark': $accent-dark,
-  'accent-light': $accent-light
-);
-@each $name, $value in $color-palette {
-  .color-#{$name} {
+  'accent-light': $accent-light);
+
+@each $name,
+$value in $color-palette {
+  .color--#{$name} {
     color: $value !important;
   }
-  .bg-#{$name} {
+
+  .bg--#{$name} {
     background-color: $value !important;
   }
 }
@@ -45,6 +56,18 @@ $color-palette: (
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+}
+
+body.admin-bar {
+  .layout__site-wrapper {
+    min-height: calc(100vh - #{$wp-admin-bar});
+  }
+
+  @include media-breakpoint-up(sm) {
+    .layout__site-wrapper {
+      min-height: calc(100vh - #{$wp-admin-bar});
+    }
+  }
 }
 
 #layout__content {

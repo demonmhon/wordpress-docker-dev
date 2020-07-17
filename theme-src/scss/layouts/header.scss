@@ -1,12 +1,12 @@
-// Header layout
+/*
+ * Header layout
+ * Mostly for everything is header.php
+ */
 
 html {
   &.show-nav {
     .layout__header {
       z-index: 9901 !important;
-
-      .navbar-header {
-      }
 
       &::before {
         background-color: transparent;
@@ -16,6 +16,7 @@ html {
 }
 
 .layout__header {
+
   .navbar,
   .nav-menu--main,
   .site-search {
@@ -26,16 +27,16 @@ html {
 
   .navbar {
     margin: 0;
-    &-toggle {}
-
     &-brand {
       height: auto;
+
       .logo {}
 
       .text {
         display: none;
       }
     }
+
     .icon-bar {}
   }
 
@@ -46,8 +47,28 @@ html {
     .current-menu-item {}
   }
 
-  .site-search {
+  .navbar-toggler {
+    padding: 0;
+    $menu-size: 28px;
+
+    .hamburger {
+      padding: 0;
+    }
+
+    .hamburger-box {
+      width: $menu-size;
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
+      background-color: $link-color;
+      width: $menu-size;
+      height: 3px;
+    }
   }
+
+  .site-search {}
 
   @include media-breakpoint-up(sm) {
     // @media (min-width: $sm) styles
