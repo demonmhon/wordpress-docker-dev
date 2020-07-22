@@ -1,10 +1,12 @@
 // index.js
 
-import './vendor/bootstrap/collapse';
-import './vendor/bootstrap/dropdown';
-import './vendor/bootstrap/util';
+import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/dist/dropdown';
+import 'bootstrap/js/dist/util';
 
 (function ($) {
+  // Sl: Selector
+  // El: Element
   const headerEl = $('.layout__header');
   const navTogglerSl = '.navbar-toggler';
   const navSl = '#nav-menu--main';

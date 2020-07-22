@@ -7,7 +7,7 @@ const cssbeautify = require('gulp-cssbeautify');
 const gulp = require('gulp');
 const pkg = require('./package.json');
 const rename = require('gulp-rename');
-const scss = require('gulp-sass');
+const sass = require('gulp-sass');
 const source = require('vinyl-source-stream');
 const uglify = require('gulp-uglify');
 
@@ -58,7 +58,7 @@ const compileScript = () => {
 const compileStyle = () => {
   return gulp
     .src(`${assetsConfig.srcScss}/style.scss`)
-    .pipe(scss())
+    .pipe(sass({ includePaths: ['node_modules'] }))
     .on('error', logError)
     .pipe(cssbeautify())
     .pipe(rename('style.css'))
@@ -87,3 +87,4 @@ const defaultTasks = gulp.parallel(build, watch);
 
 gulp.task('default', gulp.series(defaultTasks));
 gulp.task('watch', gulp.series(watch));
+gulp.task('build', gulp.series(build));
