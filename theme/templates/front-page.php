@@ -10,7 +10,7 @@
   <div class="section section--intro front-page__content--intro">
     <div class="container">
       <div class="row" >
-        <div class="col-xs-12">
+        <div class="col">
           <div class=" layout__content__col layout__content__col--primary">
             <div class="section-title">
               <h1 class="section-title-text"><?php echo get_bloginfo('name') ?></h1>
@@ -28,7 +28,7 @@
     <div class="section-content">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col">
             <div class="layout__content__col layout__content__col--primary">
               <?php while ( have_posts() ) : the_post(); ?>
               <article id="post-<?php the_ID(); ?>" <?php post_class('post-item post-item--full-content'); ?>>
