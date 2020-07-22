@@ -2646,16 +2646,15 @@ require("./vendor/bootstrap/util");
 // index.js
 (function ($) {
   var headerEl = $('.layout__header');
+  var navTogglerSl = '.navbar-toggler';
   var navSl = '#nav-menu--main';
   uiNav();
   frontPageSlide();
 
   function uiNav() {
-    var _this = this;
-
     $("[data-target=\"".concat(navSl, "\"]")).on('click', function (e) {
       $('html').toggleClass('show-nav');
-      $(_this).find('.hamburger').toggleClass('is-active');
+      $(this).find('.hamburger').toggleClass('is-active');
     });
     $('html').on('mouseup touchmove', function (e) {
       if ($('html').hasClass('show-nav')) {
@@ -2663,9 +2662,7 @@ require("./vendor/bootstrap/util");
         var contain = headerEl.has(e.target).length;
 
         if (!target && !contain) {
-          $(navSl).removeClass('in');
-          $('html').removeClass('show-nav');
-          headerEl.find('.navbar-toggle').attr('aria-expanded', 'false').find('.hamburger').removeClass('is-active');
+          headerEl.find(navTogglerSl).click();
         }
       }
     });
