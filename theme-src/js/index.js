@@ -1,29 +1,26 @@
 // index.js
 
-import './vendor/popper/popper.min';
 import './vendor/bootstrap/collapse';
 import './vendor/bootstrap/dropdown';
 import './vendor/bootstrap/util';
 
 (function ($) {
-  let headerEl = $('.layout__header');
-  let navSl = '#nav-menu--main';
+  const headerEl = $('.layout__header');
+  const navSl = '#nav-menu--main';
 
   uiNav();
-  frontpageSlide();
+  frontPageSlide();
 
-  function uiNav () {
-    $('[data-target="' + navSl + '"]').on('click', function () {
+  function uiNav() {
+    $(`[data-target="${navSl}"]`).on('click', (e) => {
       $('html').toggleClass('show-nav');
-      $(this)
-        .find('.hamburger')
-        .toggleClass('is-active');
+      $(this).find('.hamburger').toggleClass('is-active');
     });
 
-    $('html').on('mouseup touchmove', function (e) {
+    $('html').on('mouseup touchmove', (e) => {
       if ($('html').hasClass('show-nav')) {
-        let target = $(navSl).is(e.target);
-        let contain = headerEl.has(e.target).length;
+        const target = $(navSl).is(e.target);
+        const contain = headerEl.has(e.target).length;
         if (!target && !contain) {
           $(navSl).removeClass('in');
           $('html').removeClass('show-nav');
@@ -37,5 +34,5 @@ import './vendor/bootstrap/util';
     });
   }
 
-  function frontpageSlide () {}
+  function frontPageSlide() {}
 })(jQuery);

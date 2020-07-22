@@ -42,6 +42,7 @@ const compileScript = () => {
         presets: ['@babel/preset-env'],
       })
     )
+    .transform({ global: true }, 'browserify-shim')
     .bundle()
     .on('error', logError)
     .pipe(source('script.js'))
