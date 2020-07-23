@@ -11,7 +11,7 @@
     <div class="container">
       <div class="row" >
         <div class="col">
-          <div class=" layout__content__col layout__content__col--primary">
+          <div class="layout__content__col layout__content__col--primary">
             <div class="section-title">
               <h1 class="section-title-text"><?php echo get_bloginfo('name') ?></h1>
             </div>
