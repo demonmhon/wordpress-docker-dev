@@ -10,7 +10,7 @@
 <div class="content-page content-page--single content-page--contact">
   <div class="section">
     <div class="container">
-      <div class="row" >
+      <div class="row">
         <div class="col">
           <div class="layout__content__col layout__content__col--primary">
             <div class="section-title">

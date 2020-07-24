@@ -9,7 +9,7 @@
   <!-- Intro -->
   <div class="section section--intro front-page__content--intro">
     <div class="container">
-      <div class="row" >
+      <div class="row">
         <div class="col">
           <div class="layout__content__col layout__content__col--primary">
             <div class="section-title">
