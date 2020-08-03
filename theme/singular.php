@@ -4,7 +4,7 @@
   <div class="section">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col">
           <div class="layout__content__col layout__content__col--primary">
             <?php get_template_part('template-parts/post', 'item') ?>
           </div>
