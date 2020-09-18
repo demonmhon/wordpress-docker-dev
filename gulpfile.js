@@ -60,6 +60,7 @@ const compileStyle = () => {
     .src(`${assetsConfig.srcScss}/style.scss`)
     .pipe(sass({ includePaths: ['node_modules'] }))
     .on('error', logError)
+    .pipe(autoprefixer({ cascade: false }))
     .pipe(cssbeautify())
     .pipe(rename('style.css'))
     .pipe(banner(comment, { pkg: pkg }))
