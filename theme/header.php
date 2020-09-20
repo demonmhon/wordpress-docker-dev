@@ -36,7 +36,7 @@ if (function_exists('get_field')) {
               </div>
             </div>
           </button>
-          <div class="collapse navbar-collapse" id="nav-menu--main">
+          <div class="nav-menu--main collapse navbar-collapse" id="nav-menu--main">
             <?php get_template_part('template-parts/main-menu'); ?>
             <div class="form-inline my-2 my-lg-0">
               <?php get_template_part('template-parts/search-form'); ?>
