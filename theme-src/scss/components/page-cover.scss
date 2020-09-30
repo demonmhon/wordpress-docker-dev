@@ -8,4 +8,8 @@
   @include media-breakpoint-up(sm) {
     min-height: 60vh;
   }
+
+  .container {
+    position: relative;
+  }
 }
