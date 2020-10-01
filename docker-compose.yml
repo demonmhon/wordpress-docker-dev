@@ -22,12 +22,16 @@ services:
       - ./uploads:/var/www/html/wp-content/uploads
       - ./.htaccess:/var/www/html/.htaccess
     ports:
-      - '${PORT}:80'
+      - '${WORDPRESS_PORT}:80'
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: my_wordpress_db_password
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define('GOOGLE_API_KEY', '${GOOGLE_API_KEY}');
+
 volumes:
   dbvolume:
   wp-content:
