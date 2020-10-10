@@ -1,10 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item post-item--full-content'); ?>>
   <div class="post-item__post-title">
-    <?php if (is_single() || is_page()) : ?>
-      <h1 class="post-item__post-title-text"><?php the_title(); ?></h1>
-    <?php else: ?>
-      <h2 class="post-item__post-title-text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php endif; ?>
+    <h2 class="post-item__post-title-text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   </div>
   <div class="post-item__thumbnail">
     <span class="post-item__thumbnail__img-mask">

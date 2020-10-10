@@ -10,6 +10,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const source = require('vinyl-source-stream');
 const uglify = require('gulp-uglify');
+const autoprefixer = require('gulp-autoprefixer');
 
 const comment = [
   '/**',
