@@ -60,9 +60,9 @@ function theme_customizer_register_layout($wp_customize) {
   $wp_customize->add_section(
     'theme_layout',
     array(
-      'title'     => __('Layouts'),
+      'title'       => __('Layouts'),
       'description' => __(''),
-      'priority'  => 902,
+      'priority'    => 902,
     )
   );
   $wp_customize->add_setting(
@@ -74,17 +74,43 @@ function theme_customizer_register_layout($wp_customize) {
   $wp_customize->add_control(
     'theme_layout_display_sidebar',
     array(
-      'label'     => __('Widgets'),
+      'label'       => __('Widgets'),
       'description' => __('Show widgets in sidebar'),
-      'section'   => 'theme_layout',
-      'type'    => 'checkbox',
-      'priority'  => 10
+      'section'     => 'theme_layout',
+      'type'        => 'checkbox',
+      'priority'    => 10
     )
   );
 }
 
-add_action('customize_register' , 'theme_customizer_register_appearance');
-add_action('customize_register' , 'theme_customizer_register_layout');
+function theme_customizer_register_logo($wp_customize) {
+  $wp_customize->add_section(
+    'theme_logo',
+    array(
+      'title'       => __('Logo'),
+      'description' => __('The logo for website'),
+      'priority'    => 901,
+    )
+  );
+  $wp_customize->add_setting(
+    'theme_logo_img',
+    array(
+      'default' => ''
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control($wp_customize, 'theme_logo_img',
+      array(
+        'label'       => __('Main Logo Image'),
+        'section'     => 'theme_logo',
+        'description' => __('The main logo appeared in header'),
+        'settings'    => 'theme_logo_img',
+        'priority'    => 10
+      )
+    )
+  );
+}
+
 
 /**
  * Get customizer settings
@@ -102,10 +128,17 @@ function get_theme_custom_header_styles() {
   return $custom_header_styles;
 }
 
+// add_action('customize_register' , 'theme_customizer_register_appearance');
+// add_action('customize_register' , 'theme_customizer_register_layout');
+add_action('customize_register' , 'theme_customizer_register_logo');
+
 // get_theme_mod()
 // --
 
 // theme_appearance_header_bg_color
 // theme_appearance_header_bg_img
-
 // theme_layout_display_sidebar
+
+function get_theme_main_logo() {
+  return get_theme_mod('theme_logo_img');
+}

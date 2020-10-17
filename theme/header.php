@@ -9,13 +9,7 @@
 </head>
 <?php
 
-$logo = get_stylesheet_directory_uri() . '/img/logo.png';
-
-if (function_exists('get_field')) {
-  if (get_field('header_logo', 'option')) {
-    $logo = get_field('header_logo', 'option');
-  }
-}
+$logo_img = get_theme_main_logo();
 
 ?>
 <body <?php body_class(); ?>>
@@ -27,7 +21,14 @@ if (function_exists('get_field')) {
     <div class="layout__header-container">
       <nav class="navbar navbar-expand-md">
         <div class="container">
-          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+          <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+          <?php if ($logo_img) : ?>
+            <span class="logo">
+              <img src="<?php echo $logo_img ?>" alt="<?php bloginfo('name'); ?>" class="logo-img logo-img-default">
+            </span>
+            <?php endif ?>
+            <span class="text"><?php bloginfo('name'); ?></span>
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu--main" aria-controls="nav-menu--main" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <div class="hamburger hamburger--slider">
