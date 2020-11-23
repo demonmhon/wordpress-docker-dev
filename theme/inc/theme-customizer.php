@@ -1,5 +1,10 @@
 <?php
 
+define('THEME_CUSTOMIZER_HEADER_BG_COLOR', 'theme_appearance_header_bg_color');
+define('THEME_CUSTOMIZER_HEADER_BG_IMG', 'theme_appearance_header_bg_img');
+define('THEME_LOGO_IMG', 'theme_logo_img');
+define('THEME_SHOW_SEARCH_BOX', 'theme_show_search_box');
+
 function customizer_get_categories_select() {
   $categories = get_categories(array(
     'hide_empty' => 0
@@ -23,33 +28,33 @@ function theme_customizer_register_appearance($wp_customize) {
     )
   );
   $wp_customize->add_setting(
-    'theme_appearance_header_bg_color',
+    THEME_CUSTOMIZER_HEADER_BG_COLOR,
     array(
       'default' => ''
     )
   );
   $wp_customize->add_setting(
-    'theme_appearance_header_bg_img',
+    THEME_CUSTOMIZER_HEADER_BG_IMG,
     array(
       'default' => ''
     )
   );
   $wp_customize->add_control(
     new WP_Customize_Color_Control(
-      $wp_customize, 'theme_appearance_header_bg_color', array(
+      $wp_customize, THEME_CUSTOMIZER_HEADER_BG_COLOR, array(
         'label'  => __('Header Background Color'),
         'section'  => 'theme_appearance',
-        'settings' => 'theme_appearance_header_bg_color',
+        'settings' => THEME_CUSTOMIZER_HEADER_BG_COLOR,
         'priority' => 10
       )
     )
   );
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
-      $wp_customize, 'theme_appearance_header_bg_img', array(
+      $wp_customize, THEME_CUSTOMIZER_HEADER_BG_IMG, array(
         'label'  => __('Header Background Image'),
         'section'  => 'theme_appearance',
-        'settings' => 'theme_appearance_header_bg_img',
+        'settings' => THEME_CUSTOMIZER_HEADER_BG_IMG,
         'priority' => 20
       )
     )
@@ -84,29 +89,39 @@ function theme_customizer_register_layout($wp_customize) {
 }
 
 function theme_customizer_register_logo($wp_customize) {
-  $wp_customize->add_section(
-    'theme_logo',
-    array(
-      'title'       => __('Logo'),
-      'description' => __('The logo for website'),
-      'priority'    => 901,
-    )
-  );
   $wp_customize->add_setting(
-    'theme_logo_img',
+    THEME_LOGO_IMG,
     array(
       'default' => ''
     )
   );
   $wp_customize->add_control(
-    new WP_Customize_Image_Control($wp_customize, 'theme_logo_img',
+    new WP_Customize_Image_Control($wp_customize, THEME_LOGO_IMG,
       array(
         'label'       => __('Main Logo Image'),
-        'section'     => 'theme_logo',
+        'section'     => 'title_tagline',
         'description' => __('The main logo appeared in header'),
-        'settings'    => 'theme_logo_img',
-        'priority'    => 10
+        'priority'    => 100
       )
+    )
+  );
+}
+
+function theme_customizer_show_search_box($wp_customize) {
+  $wp_customize->add_setting(
+    THEME_SHOW_SEARCH_BOX,
+    array(
+      'default' => '1'
+    )
+  );
+  $wp_customize->add_control(
+    THEME_SHOW_SEARCH_BOX,
+    array(
+      'label'       => __('Show search box'),
+      'description' => __('Show search box in website'),
+      'section'     => 'title_tagline',
+      'type'        => 'checkbox',
+      'priority'    => 110
     )
   );
 }
@@ -131,6 +146,7 @@ function get_theme_custom_header_styles() {
 // add_action('customize_register' , 'theme_customizer_register_appearance');
 // add_action('customize_register' , 'theme_customizer_register_layout');
 add_action('customize_register' , 'theme_customizer_register_logo');
+add_action('customize_register' , 'theme_customizer_show_search_box');
 
 // get_theme_mod()
 // --
@@ -138,7 +154,12 @@ add_action('customize_register' , 'theme_customizer_register_logo');
 // theme_appearance_header_bg_color
 // theme_appearance_header_bg_img
 // theme_layout_display_sidebar
+// theme_show_search_box
 
 function get_theme_main_logo() {
-  return get_theme_mod('theme_logo_img');
+  return get_theme_mod(THEME_LOGO_IMG, '');
+}
+
+function should_show_search_box() {
+  return get_theme_mod(THEME_SHOW_SEARCH_BOX, false);
 }

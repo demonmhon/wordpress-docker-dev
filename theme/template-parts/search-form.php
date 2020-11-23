@@ -1,3 +1,4 @@
+<?php if (should_show_search_box()) : ?>
 <!-- Search box -->
 <form class="site-search navbar-form" role="search" action="<?php echo home_url('/'); ?>">
   <div class="form-group">
@@ -5,3 +6,4 @@
     <input id="search" type="search" class="form-control" placeholder="Search..." name="s"><button type="submit" class="btn btn-default"><span>Search</span></button>
   </div>
 </form>
+<?php endif ?>
