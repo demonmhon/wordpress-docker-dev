@@ -8,84 +8,24 @@
  */
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 /*!
-  * Bootstrap collapse.js v4.5.0 (https://getbootstrap.com/)
+  * Bootstrap collapse.js v4.5.2 (https://getbootstrap.com/)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory((typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
-  (global = global || self, global.Collapse = factory(global.jQuery, global.Util));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Collapse = factory(global.jQuery, global.Util));
 }(this, (function ($, Util) { 'use strict';
 
   $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
   Util = Util && Object.prototype.hasOwnProperty.call(Util, 'default') ? Util['default'] : Util;
 
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-  }
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-      keys.push.apply(keys, symbols);
-    }
-
-    return keys;
-  }
-
-  function _objectSpread2(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-
-      if (i % 2) {
-        ownKeys(Object(source), true).forEach(function (key) {
-          _defineProperty(target, key, source[key]);
-        });
-      } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-      } else {
-        ownKeys(Object(source)).forEach(function (key) {
-          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-      }
-    }
-
-    return target;
-  }
-
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -93,7 +33,7 @@
    */
 
   var NAME = 'collapse';
-  var VERSION = '4.5.0';
+  var VERSION = '4.5.2';
   var DATA_KEY = 'bs.collapse';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -308,7 +248,7 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2(_objectSpread2({}, Default), config);
+      config = _extends({}, Default, config);
       config.toggle = Boolean(config.toggle); // Coerce string values
 
       Util.typeCheckConfig(NAME, config, DefaultType);
@@ -362,7 +302,7 @@
         var $this = $(this);
         var data = $this.data(DATA_KEY);
 
-        var _config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default), $this.data()), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default, $this.data(), typeof config === 'object' && config ? config : {});
 
         if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
           _config.toggle = false;
@@ -442,85 +382,25 @@
 
 },{"./util.js":3}],2:[function(require,module,exports){
 /*!
-  * Bootstrap dropdown.js v4.5.0 (https://getbootstrap.com/)
+  * Bootstrap dropdown.js v4.5.2 (https://getbootstrap.com/)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory((typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null), require('popper.js'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', 'popper.js', './util.js'], factory) :
-  (global = global || self, global.Dropdown = factory(global.jQuery, global.Popper, global.Util));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Dropdown = factory(global.jQuery, global.Popper, global.Util));
 }(this, (function ($, Popper, Util) { 'use strict';
 
   $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
   Popper = Popper && Object.prototype.hasOwnProperty.call(Popper, 'default') ? Popper['default'] : Popper;
   Util = Util && Object.prototype.hasOwnProperty.call(Util, 'default') ? Util['default'] : Util;
 
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-  }
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-      keys.push.apply(keys, symbols);
-    }
-
-    return keys;
-  }
-
-  function _objectSpread2(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-
-      if (i % 2) {
-        ownKeys(Object(source), true).forEach(function (key) {
-          _defineProperty(target, key, source[key]);
-        });
-      } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-      } else {
-        ownKeys(Object(source)).forEach(function (key) {
-          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-      }
-    }
-
-    return target;
-  }
-
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -528,7 +408,7 @@
    */
 
   var NAME = 'dropdown';
-  var VERSION = '4.5.0';
+  var VERSION = '4.5.2';
   var DATA_KEY = 'bs.dropdown';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -755,7 +635,7 @@
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2(_objectSpread2(_objectSpread2({}, this.constructor.Default), $(this._element).data()), config);
+      config = _extends({}, this.constructor.Default, $(this._element).data(), config);
       Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
       return config;
     };
@@ -800,7 +680,7 @@
 
       if (typeof this._config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread2(_objectSpread2({}, data.offsets), _this2._config.offset(data.offsets, _this2._element) || {});
+          data.offsets = _extends({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
           return data;
         };
       } else {
@@ -830,7 +710,7 @@
         };
       }
 
-      return _objectSpread2(_objectSpread2({}, popperConfig), this._config.popperConfig);
+      return _extends({}, popperConfig, this._config.popperConfig);
     } // Static
     ;
 
@@ -1042,22 +922,22 @@
 
 },{"./util.js":3,"popper.js":4}],3:[function(require,module,exports){
 /*!
-  * Bootstrap util.js v4.5.0 (https://getbootstrap.com/)
+  * Bootstrap util.js v4.5.2 (https://getbootstrap.com/)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory((typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null)) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global = global || self, global.Util = factory(global.jQuery));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Util = factory(global.jQuery));
 }(this, (function ($) { 'use strict';
 
   $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.0): util.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Bootstrap (v4.5.2): util.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
   /**
@@ -1236,7 +1116,7 @@
 
 
 },{}],4:[function(require,module,exports){
-(function (global){
+(function (global){(function (){
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
@@ -3862,7 +3742,7 @@ return Popper;
 })));
 
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],5:[function(require,module,exports){
 "use strict";
 
@@ -3874,13 +3754,29 @@ require("bootstrap/js/dist/util");
 
 // index.js
 (function ($) {
-  // Sl: Selector
-  // El: Element
+  /**
+   * Sl: Selector
+   * El: Element
+   */
   var headerEl = $('.layout__header');
   var navTogglerSl = '.navbar-toggler';
   var navSl = '#nav-menu--main';
-  uiNav();
-  frontPageSlide();
+  $(document).ready(function () {
+    uiNav();
+    frontPageSlide();
+  });
+  /**
+   * Functions
+   */
+
+  function loadFonts() {
+    // https://github.com/typekit/webfontloader
+    WebFont.load({
+      google: {
+        families: []
+      }
+    });
+  }
 
   function uiNav() {
     $("[data-target=\"".concat(navSl, "\"]")).on('click', function (e) {

@@ -24,3 +24,9 @@
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
+
+@mixin fa-icon($name: Free) {
+  font-family: 'Font Awesome 5 #{$name}';
+  display: inline-block;
+  @content;
+}

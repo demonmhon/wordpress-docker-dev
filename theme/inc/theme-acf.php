@@ -10,7 +10,7 @@ if (function_exists('acf_add_options_page')) {
 }
 
 function theme_acf_init() {
-	acf_update_setting('google_api_key', '');
+	acf_update_setting('google_api_key', GOOGLE_API_KEY);
 }
 
 function my_acf_json_load_point( $paths ) {

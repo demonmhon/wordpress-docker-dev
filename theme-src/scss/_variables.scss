@@ -25,7 +25,7 @@ $wp-admin-bar-xs: 46px;
 
 // Layouts
 // Font and color
-$base-font-size: 13px;
+$base-font-size: 14px;
 $base-color: #212121;
 $link-color: $accent;
 $border-line-color: #eee;
@@ -37,5 +37,18 @@ $header-navbar-bg-color: $primary-dark;
 
 // Transitions
 $transition-duration: .25s;
-$transition-duration-false: .125s;
+$transition-duration-fast: .125s;
 $transition-duration-slow: .4s;
+
+// Color palette - text and background
+$color-palette: ('text': $text-color,
+  'heading': $heading-color,
+  'primary': $primary,
+  'primary-dark': $primary-dark,
+  'primary-light': $primary-light,
+  'secondary': $secondary,
+  'secondary-dark': $secondary-dark,
+  'secondary-light': $secondary-light,
+  'accent': $accent,
+  'accent-dark': $accent-dark,
+  'accent-light': $accent-light);
