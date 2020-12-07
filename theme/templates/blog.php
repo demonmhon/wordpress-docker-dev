@@ -9,19 +9,15 @@
 <div class="content-page content-page--single content-page--blog">
   <div class="section">
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="layout__content__col layout__content__col--primary">
-            <div class="section-title">
-              <h1 class="section-title-text"><?php get_the_title() ?></h1>
-            </div>
-            <div class="section-content">
-              <div class="category__post-list">
-              <?php while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part('template-parts/category', 'post-item') ?>
-              <?php endwhile ?>
-              </div>
-            </div>
+      <div class="layout__content__col layout__content__col--primary">
+        <div class="section-title">
+          <h1 class="section-title-text">Blog</h1>
+        </div>
+        <div class="section-content">
+          <div class="category__post-list">
+          <?php while ( have_posts() ) : the_post(); ?>
+            <?php get_template_part('template-parts/post-summary') ?>
+          <?php endwhile ?>
           </div>
         </div>
       </div>

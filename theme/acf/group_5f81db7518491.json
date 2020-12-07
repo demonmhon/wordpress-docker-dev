@@ -58,6 +58,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5fce303b22536",
+            "label": "Fax",
+            "name": "fax",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f81dc23932ef",
             "label": "Socials",
             "name": "socials",
@@ -93,6 +112,7 @@
                         "facebook": "Facebook",
                         "instagram": "Instagram",
                         "linkedin": "LinkedIn",
+                        "line: Line": "line: Line",
                         "twitter": "Twitter",
                         "youtube": "YouTube"
                     },
@@ -102,6 +122,41 @@
                     "ui": 0,
                     "return_format": "value",
                     "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fce2514bfab0",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fce251cbfab1",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
                     "placeholder": ""
                 }
             ]
@@ -124,5 +179,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1602346200
+    "modified": 1607348310
 }

@@ -9,7 +9,7 @@
           <div class="row">
             <div class="col">
               <div class="main-menu--footer">
-                <?php get_template_part('template-parts/main-menu'); ?>
+                <?php get_template_part('template-parts/footer-menu'); ?>
               </div>
             </div>
           </div>

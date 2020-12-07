@@ -19,18 +19,17 @@
   </li>
 </ul> -->
 <?php
+  $nav_id = 'main_nav';
   $nav_menu =
     array(
       'theme_location' => 'main_nav',
       'container'      => false,
       'menu_id'        => 'main-menu--header-nav',
       'menu_class'     => 'main-menu main-menu--header-nav navbar-nav mr-auto',
-      'depth'          => 3,
+      'depth'          => 2,
       'walker'         => new bs4navwalker()
     );
-  if (has_nav_menu( 'main_nav' )) {
+  if (has_nav_menu( $nav_id  )) {
     wp_nav_menu($nav_menu);
-  } else {
-    echo('<code>' . 'No menu for `#main_nav`. Please check the Appearance > Menus' . '</code>');
   }
 ?>

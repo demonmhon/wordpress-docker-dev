@@ -14481,7 +14481,7 @@ readers do not read off random characters that represent icons */
     position: relative;
 }
 
-.post-item__content p:last-child {
+.post__content p:last-child {
     margin-bottom: 0;
 }
 
@@ -14490,7 +14490,7 @@ readers do not read off random characters that represent icons */
  * For global styles
  */
 html {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 body {

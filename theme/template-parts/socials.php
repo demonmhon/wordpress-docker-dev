@@ -1,6 +1,6 @@
 <?php if (have_rows('socials', 'option')) : ?>
 <div class="socials">
-  <ul class="socials">
+  <ul class="social-list">
     <?php foreach (get_field('socials', 'option') as $platform): ?>
       <li class="socials__list-item">
         <a href="<?php echo htmlspecialchars($platform['url']) ?>" target="_blank">
