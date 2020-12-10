@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col">
           <div class="layout__content__col layout__content__col--primary">
-            <?php get_template_part('template-parts/post', 'item') ?>
+            <?php get_template_part('template-parts/post-full') ?>
           </div>
         </div>
       </div>
