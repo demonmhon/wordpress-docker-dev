@@ -25,7 +25,9 @@ const comment = [
 
 const assetsConfig = {
   srcJs: './theme-src/js',
+  srcJsBlocks: './theme-src/blocks-js',
   srcScss: './theme-src/scss',
+  srcScssBlocks: './theme-src/blocks-scss',
   distDir: './theme/assets',
 };
 
@@ -56,6 +58,28 @@ const compileScript = () => {
     .pipe(gulp.dest(assetsConfig.distDir));
 };
 
+const compileBlocksScript = () => {
+  return browserify({
+    entries: [`${assetsConfig.srcJsBlocks}/index.js`],
+  })
+    .transform(
+      babelify.configure({
+        presets: ['@babel/preset-env'],
+      })
+    )
+    .transform({ global: true }, 'browserify-shim')
+    .bundle()
+    .on('error', logError)
+    .pipe(source('blocks-script.js'))
+    .pipe(buffer())
+    .pipe(banner(comment, { pkg: pkg }))
+    .pipe(gulp.dest(assetsConfig.distDir))
+    .pipe(uglify())
+    .pipe(banner(comment, { pkg: pkg }))
+    .pipe(rename('blocks-script.min.js'))
+    .pipe(gulp.dest(assetsConfig.distDir));
+};
+
 const compileStyle = () => {
   return gulp
     .src(`${assetsConfig.srcScss}/style.scss`)
@@ -72,17 +96,38 @@ const compileStyle = () => {
     .pipe(gulp.dest(assetsConfig.distDir));
 };
 
+const compileBlockStyle = () => {
+  return gulp
+    .src(`${assetsConfig.srcScssBlocks}/style.scss`)
+    .pipe(sass({ includePaths: ['node_modules'] }))
+    .on('error', logError)
+    .pipe(cssbeautify())
+    .pipe(rename('blocks-style.css'))
+    .pipe(banner(comment, { pkg: pkg }))
+    .pipe(gulp.dest(assetsConfig.distDir))
+    .pipe(cleanCSS())
+    .pipe(rename('blocks-style.min.css'))
+    .pipe(banner(comment, { pkg: pkg }))
+    .pipe(gulp.dest(assetsConfig.distDir));
+};
+
 const watchScript = () => {
   gulp.watch(`${assetsConfig.srcJs}/**/*.js`, gulp.parallel(compileScript));
 };
+const watchBlocksScript = () => {
+  gulp.watch(`${assetsConfig.srcJsBlocks}/**/*.js`, gulp.parallel(compileBlocksScript));
+};
 const watchStyle = () => {
   gulp.watch(`${assetsConfig.srcScss}/**/*.scss`, gulp.parallel(compileStyle));
+};
+const watchBlocksStyle = () => {
+  gulp.watch(`${assetsConfig.srcScssBlocks}/*.scss`, gulp.parallel(compileBlockStyle));
 };
 
 const build = gulp.series(compileScript, compileStyle);
 build.description = 'serve compiled source on local server at port 3000';
 
-const watch = gulp.parallel(watchScript, watchStyle);
+const watch = gulp.parallel(watchScript, watchBlocksScript, watchStyle, watchBlocksStyle);
 watch.description = 'watch for changes to all source';
 
 const defaultTasks = gulp.parallel(build, watch);

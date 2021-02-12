@@ -37,6 +37,7 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_assets');
  * Require theme functions
  */
 require get_template_directory() . '/inc/theme-acf.php';
+require get_template_directory() . '/inc/theme-blocks.php';
 require get_template_directory() . '/inc/theme-customizer.php';
 require get_template_directory() . '/inc/theme-functions.php';
 require get_template_directory() . '/inc/theme-menu.php';
