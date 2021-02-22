@@ -13,7 +13,8 @@ import 'bootstrap/js/dist/util';
   const navTogglerSl = '.navbar-toggler';
   const navSl = '#nav-menu--main';
 
-  $(document).ready(function() {
+  $(document).ready(function () {
+    loadFonts();
     uiNav();
     frontPageSlide();
   });
@@ -21,22 +22,27 @@ import 'bootstrap/js/dist/util';
   /**
    * Functions
    */
-  function loadFonts() {
+  function loadFonts () {
     // https://github.com/typekit/webfontloader
+    const fonts = ['Open Sans Condensed'];
     WebFont.load({
       google: {
-        families: []
+        families: [`${fonts[0]}:300,700`]
       }
+    });
+    const originFontF = $('body').css('font-family');
+    $('body').css({
+      'font-family': `${fonts[0]},${originFontF}`,
     });
   }
 
-  function uiNav() {
-    $(`[data-target="${navSl}"]`).on('click', function(e) {
+  function uiNav () {
+    $(`[data-target="${navSl}"]`).on('click', function (e) {
       $('html').toggleClass('show-nav');
       $(this).find('.hamburger').toggleClass('is-active');
     });
 
-    $('html').on('mouseup touchmove', function(e) {
+    $('html').on('mouseup touchmove', function (e) {
       if ($('html').hasClass('show-nav')) {
         const target = $(navSl).is(e.target);
         const contain = headerEl.has(e.target).length;
@@ -47,5 +53,5 @@ import 'bootstrap/js/dist/util';
     });
   }
 
-  function frontPageSlide() {}
+  function frontPageSlide () {}
 })(jQuery);

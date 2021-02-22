@@ -62,9 +62,9 @@ html {
     .hamburger-inner,
     .hamburger-inner::after,
     .hamburger-inner::before {
-      background-color: $link-color;
       width: $menu-size;
       height: 3px;
+      background-color: $link-color;
     }
   }
 
