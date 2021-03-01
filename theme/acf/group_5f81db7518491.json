@@ -3,6 +3,25 @@
     "title": "Contact Info",
     "fields": [
         {
+            "key": "field_603d1e6c64aac",
+            "label": "Address Text",
+            "name": "address_text",
+            "type": "textarea",
+            "instructions": "Alternative address to display",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
             "key": "field_5f81db7a0ecf8",
             "label": "Address",
             "name": "address",
@@ -179,5 +198,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1607348310
+    "modified": 1614618265
 }

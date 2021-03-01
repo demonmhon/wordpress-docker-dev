@@ -14464,11 +14464,36 @@ readers do not read off random characters that represent icons */
 /**
  * https://www.sitepoint.com/building-linear-gradient-mixin-sass/
  */
+.google-maps-container {
+    position: relative;
+    width: 100%;
+}
+
+.google-maps-container--16-by-9 {
+    padding-top: 56.25%;
+}
+
+.google-maps-container--4-by-3 {
+    padding-top: 75%;
+}
+
+.google-maps-container--sq {
+    padding-top: 100%;
+}
+
+.google-maps-container .map-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .page-cover {
     min-height: 75vh;
+    background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 @media (min-width: 576px) {
@@ -14494,10 +14519,10 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
     color: #212121;
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fff;
 }
 
@@ -14598,10 +14623,10 @@ a {
 }
 
 .layout__site-wrapper {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    min-height: 100vh;
 }
 
 body.admin-bar .layout__site-wrapper {
@@ -14665,9 +14690,9 @@ html.show-nav .layout__header::before {
 .layout__header .navbar-toggler .hamburger-inner,
   .layout__header .navbar-toggler .hamburger-inner::after,
   .layout__header .navbar-toggler .hamburger-inner::before {
-    background-color: #f44336;
     width: 28px;
     height: 3px;
+    background-color: #f44336;
 }
 
 /*

@@ -1,0 +1,24 @@
+.google-maps-container {
+  position: relative;
+  width: 100%;
+
+  &--16-by-9 {
+    padding-top: 56.25%;
+  }
+
+  &--4-by-3 {
+    padding-top: 75%;
+  }
+
+  &--sq {
+    padding-top: 100%;
+  }
+
+  .map-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
