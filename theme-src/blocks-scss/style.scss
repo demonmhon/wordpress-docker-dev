@@ -1,2 +1,10 @@
 // Main import files
 @import '../scss/variables';
+@import '../scss/type';
+
+@import '../scss/components/fonts';
+
+.block-editor-writing-flow .block-editor-block-list__layout {
+  @include type;
+  p {}
+}

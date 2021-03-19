@@ -6,6 +6,8 @@
  * @link http://demonmhon.net
  * @license ISC
  */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;600&display=swap");
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -14464,6 +14466,11 @@ readers do not read off random characters that represent icons */
 /**
  * https://www.sitepoint.com/building-linear-gradient-mixin-sass/
  */
+/**
+ * Type
+ *
+ * Should be included in content, shared between editor and frontend
+ */
 .google-maps-container {
     position: relative;
     width: 100%;
@@ -14506,6 +14513,21 @@ readers do not read off random characters that represent icons */
     position: relative;
 }
 
+.post {
+    font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.post h1,
+  .post h2,
+  .post h3 {
+    color: #455A64;
+    font-weight: 600;
+}
+
+.post blockquote {
+    background: #eee;
+}
+
 .post__content p:last-child {
     margin-bottom: 0;
 }
@@ -14522,7 +14544,7 @@ body {
     color: #212121;
     font-weight: normal;
     font-size: 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fff;
 }
 

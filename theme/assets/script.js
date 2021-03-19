@@ -3850,7 +3850,7 @@ require("./google-maps");
 
   function loadFonts() {
     // https://github.com/typekit/webfontloader
-    var fonts = ['Open Sans Condensed'];
+    var fonts = ['Open Sans'];
     WebFont.load({
       google: {
         families: ["".concat(fonts[0], ":300,700")]

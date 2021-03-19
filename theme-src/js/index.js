@@ -26,7 +26,7 @@ import './google-maps';
    */
   function loadFonts () {
     // https://github.com/typekit/webfontloader
-    const fonts = ['Open Sans Condensed'];
+    const fonts = ['Open Sans'];
     WebFont.load({
       google: {
         families: [`${fonts[0]}:300,700`]

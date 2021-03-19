@@ -8,12 +8,12 @@ function get_current_page_url() {
 
 function get_social_network_icon_class($type) {
   $icons = array(
-    'facebook' => 'facebook',
+    'facebook'  => 'facebook',
     'instagram' => 'instagram',
-    'twitter' => 'twitter',
-    'line' => 'line',
-    'youtube' => 'youtube',
-    'linkedin' => 'linkedin'
+    'twitter'   => 'twitter',
+    'line'      => 'line',
+    'youtube'   => 'youtube',
+    'linkedin'  => 'linkedin'
   );
   return isset($icons[$type]) ? $icons[$type] : '';
 }
