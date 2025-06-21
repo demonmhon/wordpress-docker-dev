@@ -1,5 +1,4 @@
 const babelify = require('babelify');
-const banner = require('gulp-banner');
 const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
 const cleanCSS = require('gulp-clean-css');
@@ -7,7 +6,7 @@ const cssbeautify = require('gulp-cssbeautify');
 const gulp = require('gulp');
 const pkg = require('./package.json');
 const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'))
 const source = require('vinyl-source-stream');
 const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
@@ -42,20 +41,20 @@ const compileScript = () => {
   })
     .transform(
       babelify.configure({
-        presets: ['@babel/preset-env'],
+        presets: ['@babel/preset-env', {
+          targets: "> 0.25%, not dead",
+        }],
       })
     )
     .transform({ global: true }, 'browserify-shim')
-    .bundle()
-    .on('error', logError)
-    .pipe(source('script.js'))
-    .pipe(buffer())
-    .pipe(banner(comment, { pkg: pkg }))
-    .pipe(gulp.dest(assetsConfig.distDir))
-    .pipe(uglify())
-    .pipe(banner(comment, { pkg: pkg }))
-    .pipe(rename('script.min.js'))
-    .pipe(gulp.dest(assetsConfig.distDir));
+  .bundle()
+  .on('error', logError)
+  .pipe(source('script.js'))
+  .pipe(buffer())
+  .pipe(gulp.dest(assetsConfig.distDir))
+  .pipe(uglify())
+  .pipe(rename('script.min.js'))
+  .pipe(gulp.dest(assetsConfig.distDir));
 };
 
 const compileBlocksScript = () => {
@@ -72,10 +71,8 @@ const compileBlocksScript = () => {
     .on('error', logError)
     .pipe(source('blocks-script.js'))
     .pipe(buffer())
-    .pipe(banner(comment, { pkg: pkg }))
     .pipe(gulp.dest(assetsConfig.distDir))
     .pipe(uglify())
-    .pipe(banner(comment, { pkg: pkg }))
     .pipe(rename('blocks-script.min.js'))
     .pipe(gulp.dest(assetsConfig.distDir));
 };
@@ -88,11 +85,9 @@ const compileStyle = () => {
     .pipe(autoprefixer({ cascade: false }))
     .pipe(cssbeautify())
     .pipe(rename('style.css'))
-    .pipe(banner(comment, { pkg: pkg }))
     .pipe(gulp.dest(assetsConfig.distDir))
     .pipe(cleanCSS())
     .pipe(rename('style.min.css'))
-    .pipe(banner(comment, { pkg: pkg }))
     .pipe(gulp.dest(assetsConfig.distDir));
 };
 
@@ -103,11 +98,9 @@ const compileBlockStyle = () => {
     .on('error', logError)
     .pipe(cssbeautify())
     .pipe(rename('blocks-style.css'))
-    .pipe(banner(comment, { pkg: pkg }))
     .pipe(gulp.dest(assetsConfig.distDir))
     .pipe(cleanCSS())
     .pipe(rename('blocks-style.min.css'))
-    .pipe(banner(comment, { pkg: pkg }))
     .pipe(gulp.dest(assetsConfig.distDir));
 };
 
