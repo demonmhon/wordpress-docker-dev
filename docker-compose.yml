@@ -16,7 +16,7 @@ services:
     image: wordpress:6.8-apache
     volumes:
       - ./plugins:/var/www/html/wp-content/plugins
-      - ./theme:/var/www/html/wp-content/themes/website
+      - ./wp-content-theme:/var/www/html/wp-content/themes/website
       - ./uploads:/var/www/html/wp-content/uploads
       - ./.htaccess:/var/www/html/.htaccess
     ports:

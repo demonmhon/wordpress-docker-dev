@@ -49,22 +49,21 @@ html {
 
   .navbar-toggler {
     padding: 0;
-    $menu-size: 28px;
 
     .hamburger {
       padding: 0;
     }
 
     .hamburger-box {
-      width: $menu-size;
+      width: var(--menu-size);
     }
 
     .hamburger-inner,
     .hamburger-inner::after,
     .hamburger-inner::before {
-      width: $menu-size;
+      width: var(--menu-size);
       height: 3px;
-      background-color: $link-color;
+      background-color: var(--link-color);
     }
   }
 
