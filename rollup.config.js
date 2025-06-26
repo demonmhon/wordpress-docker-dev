@@ -6,7 +6,7 @@ import autoprefixer from 'autoprefixer';
 export default {
   input: './src/js/index.js',
   output: {
-    file: './theme/assets/script.min.js',
+    file: './wp-content-theme/assets/script.min.js',
     format: 'iife',
   },
   plugins: [
