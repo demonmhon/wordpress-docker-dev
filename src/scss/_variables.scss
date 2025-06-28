@@ -1,69 +1,42 @@
 // Variables
 :root {
   --base-font-size: 14px;
-  --base-color: #212121;
+ 
   --menu-size: 28px;
 
   // Colors
-  --bg-color: #fff;
-  --primary-color: #455A64;
+  --body-bg-color: #fff;
+  --body-color: #212121;
+  --heading-color: #333333;
   --link-color: #f44336;
+  --color-primary: #455A64;
+  --color-primary-dark: #263238;
+  --color-primary-light: $primary;
+  --color-secondary: #7e57c2;
+  --color-secondary-dark: #311b92;
+  --color-secondary-light: $secondary;
+  --color-accent: #f44336;
+  --color-accent-dark: #b71c1c;
+  --color-accent-light: $accent;
 
   // Transitions
   --transition-duration: .25s;
   --transition-duration-fast: .125s;
   --transition-duration-slow: .4s;
+
+  // Padding
+  --padding: 1rem;
+
+  // WordPress
+  --wp-admin-bar: 32px;
+  --wp-admin-bar-xs: 46px;
+
+  // Breakpoints
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
 }
 
-// Colors
-$bg-color: #fff;
-$primary: #455A64;
-$primary-dark: #263238;
-$primary-light: $primary;
-$secondary: #7e57c2;
-$secondary-dark: #311b92;
-$secondary-light: $secondary;
-$accent: #f44336;
-$accent-dark: #b71c1c;
-$accent-light: $accent;
-
-$primary-contrast: #fff;
-$secondary-contrast: #fff;
-$accent-contrast: #fff;
-
-$text-color: #333;
-$heading-color: #333;
-
-// WordPress Admin
-$wp-admin-bar: 32px;
-$wp-admin-bar-xs: 46px;
-
-// Layouts
-// Font and color
-$base-font-size: 14px;
-$base-color: #212121;
-$link-color: $accent;
-$border-line-color: #eee;
-
-// Header
-$header-height: 0;
-$header-height-xs: 0;
-$header-navbar-bg-color: $primary-dark;
-
-// Transitions
-$transition-duration: .25s;
-$transition-duration-fast: .125s;
-$transition-duration-slow: .4s;
-
-// Color palette - text and background
-$color-palette: ('text': $text-color,
-  'heading': $heading-color,
-  'primary': $primary,
-  'primary-dark': $primary-dark,
-  'primary-light': $primary-light,
-  'secondary': $secondary,
-  'secondary-dark': $secondary-dark,
-  'secondary-light': $secondary-light,
-  'accent': $accent,
-  'accent-dark': $accent-dark,
-  'accent-light': $accent-light);
