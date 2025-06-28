@@ -1,13 +1,23 @@
 // Variables
 :root {
+  // Typps
   --base-font-size: 14px;
- 
-  --menu-size: 28px;
+  
+  // Breakpoints
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
 
   // Colors
+  --header-bg-color: #ecf0f1;
+  --header-text-color: #fff;
+  --footer-bg-color: #ecf0f1;
   --body-bg-color: #fff;
   --body-color: #212121;
-  --heading-color: #333333;
+  --heading-text-color: #212121;
   --link-color: #f44336;
   --color-primary: #455A64;
   --color-primary-dark: #263238;
@@ -18,6 +28,11 @@
   --color-accent: #f44336;
   --color-accent-dark: #b71c1c;
   --color-accent-light: $accent;
+
+  // Header layout
+  --header-max-width: calc(var(--breakpoint-xxl) - var(--padding));
+  --logo-max-height: 48px;
+  --logo-max-width: 160px;
 
   // Transitions
   --transition-duration: .25s;
@@ -31,12 +46,5 @@
   --wp-admin-bar: 32px;
   --wp-admin-bar-xs: 46px;
 
-  // Breakpoints
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1400px;
 }
 

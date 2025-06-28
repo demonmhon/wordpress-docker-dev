@@ -19,32 +19,26 @@ $logo_img = get_theme_main_logo();
   <!-- Site header -->
   <header id="layout__header" class="layout__header">
     <div class="layout__header-container">
-      <nav class="navbar navbar-expand-md">
-        <div class="container">
-          <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-          <?php if ($logo_img) : ?>
-            <span class="logo">
-              <img src="<?php echo $logo_img ?>" alt="<?php bloginfo('name'); ?>" class="logo-img logo-img-default">
-            </span>
-            <?php endif ?>
-            <span class="text"><?php bloginfo('name'); ?></span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu--main" aria-controls="nav-menu--main" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <div class="hamburger hamburger--slider">
-              <div class="hamburger-box">
-                <div class="hamburger-inner"></div>
-              </div>
-            </div>
-          </button>
-          <div class="nav-menu--main collapse navbar-collapse" id="nav-menu--main">
-            <?php get_template_part('template-parts/main-menu'); ?>
-            <div class="form-inline my-2 my-lg-0">
-              <?php get_template_part('template-parts/search-form'); ?>
-            </div>
+      <a class="brand" href="<?php bloginfo('url'); ?>">
+        <?php if ($logo_img) : ?>
+        <span class="logo">
+          <div class="img-container">
+            <img src="<?php echo $logo_img ?>" alt="<?php bloginfo('name'); ?>" class="logo-img logo-img-default">
           </div>
+        </span>
+        <?php endif ?>
+        <span class="text">
+          <?php bloginfo('name'); ?>
+        </span>
+      </a>
+      <div class="nav-menu--main" id="nav-menu--main">
+        <nav class="navbar">
+          <?php get_template_part('template-parts/main-menu'); ?>
+        </nav>
+        <div class="search-header">
+          <?php get_template_part('template-parts/search-form'); ?>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
   <!-- Page content -->

@@ -19,6 +19,10 @@ a {
   color: var(--link-color);
 }
 
+h1, h2, h3 {
+  color: var(--heading-text-color);
+}
+
 h1 {}
 
 h2 {}
@@ -47,6 +51,9 @@ body.admin-bar {
   flex: 1;
 }
 
+.content-page--single {
+  padding: var(--padding);
+}
 
 @media (min-width: var(--breakpoint-md)) {
   body.admin-bar {

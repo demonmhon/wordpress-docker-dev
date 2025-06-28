@@ -24,9 +24,9 @@ $total_results = $wp_query->found_posts;
               </div>
             </div>
             <?php if (have_posts()) : ?>
-              <div class="category__post-list">
+              <div class="content-page--search-result-list">
                 <?php while (have_posts()) : the_post(); ?>
-                  <?php get_template_part('template-parts/category', 'post-item') ?>
+                  <?php get_template_part('template-parts/search-result', 'post-item') ?>
                 <?php endwhile; ?>
               </div>
             <?php endif ?>
