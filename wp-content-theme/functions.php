@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+
 add_action('after_setup_theme', function() {
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
@@ -40,4 +47,4 @@ require get_template_directory() . '/inc/theme-menu.php';
 // require get_template_directory() . '/inc/theme-post-types.php';
 // require get_template_directory() . '/inc/theme-tags.php';
 // require get_template_directory() . '/inc/theme-widgets.php';
-require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+// require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
