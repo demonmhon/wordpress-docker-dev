@@ -30,7 +30,7 @@
   --color-accent-light: $accent;
 
   // Header layout
-  --header-max-width: calc(var(--breakpoint-xxl) - var(--padding));
+  --header-max-width: calc(var(--breakpoint-xl) - calc(var(--padding) * 3.5));
   --logo-max-height: 48px;
   --logo-max-width: 160px;
 
@@ -45,6 +45,11 @@
   // WordPress
   --wp-admin-bar: 32px;
   --wp-admin-bar-xs: 46px;
+}
 
+@include media-breakpoint-up(xxl) {
+  :root {
+    --header-max-width: calc(var(--breakpoint-xxl) - calc(var(--padding) * 3.5));
+  }
 }
 
