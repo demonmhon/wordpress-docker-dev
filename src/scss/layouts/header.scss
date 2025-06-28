@@ -25,9 +25,10 @@ html {
     max-width: var(--header-max-width);
     padding: 0 var(--padding);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
   }
 
   .navbar,
@@ -65,7 +66,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 
     .navbar-nav {}
 
@@ -95,7 +96,16 @@ html {
 
   .search-header {}
 
-  @include media-breakpoint-up(sm) {
-    // @media (min-width: $sm) styles
+  @include media-breakpoint-up(md) {
+    &-container {
+      justify-content: space-between;
+      
+      flex-direction: row;
+    }
+
+     .nav-menu--main {
+        display: flex;
+        flex-direction: row;
+     }
   }
 }

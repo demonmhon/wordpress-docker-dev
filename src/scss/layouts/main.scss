@@ -19,7 +19,9 @@ a {
   color: var(--link-color);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--heading-text-color);
 }
 
@@ -55,7 +57,7 @@ body.admin-bar {
   padding: var(--padding);
 }
 
-@media (min-width: var(--breakpoint-md)) {
+@include media-breakpoint-up(sm) {
   body.admin-bar {
     .layout__site-wrapper {
       min-height: calc(100vh - var(--wp-admin-bar));
