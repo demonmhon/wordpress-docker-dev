@@ -1,5 +1,5 @@
 import scss from 'rollup-plugin-scss'
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 
@@ -8,6 +8,7 @@ export default {
   output: {
     file: './wp-content-theme/assets/script.min.js',
     format: 'iife',
+    sourcemap: true
   },
   plugins: [
     scss({
