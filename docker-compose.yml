@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysql:5.7
+    image: mysql:8.4
     volumes:
       - .db:/var/lib/mysql
     restart: always
@@ -23,7 +23,7 @@ services:
       - '${WORDPRESS_PORT}:80'
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: my_wordpress_db_password
       WORDPRESS_DEBUG: 1
