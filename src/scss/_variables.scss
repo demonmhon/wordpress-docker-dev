@@ -1,0 +1,55 @@
+// Variables
+:root {
+  // Typps
+  --base-font-size: 14px;
+  
+  // Breakpoints
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  // Colors
+  --header-bg-color: #ecf0f1;
+  --header-text-color: #fff;
+  --footer-bg-color: #ecf0f1;
+  --body-bg-color: #fff;
+  --body-color: #212121;
+  --heading-text-color: #212121;
+  --link-color: #f44336;
+  --color-primary: #455A64;
+  --color-primary-dark: #263238;
+  --color-primary-light: $primary;
+  --color-secondary: #7e57c2;
+  --color-secondary-dark: #311b92;
+  --color-secondary-light: $secondary;
+  --color-accent: #f44336;
+  --color-accent-dark: #b71c1c;
+  --color-accent-light: $accent;
+
+  // Header layout
+  --header-max-width: calc(var(--breakpoint-xl) - calc(var(--padding) * 3.5));
+  --logo-max-height: 48px;
+  --logo-max-width: 160px;
+
+  // Transitions
+  --transition-duration: .25s;
+  --transition-duration-fast: .125s;
+  --transition-duration-slow: .4s;
+
+  // Padding
+  --padding: 1rem;
+
+  // WordPress
+  --wp-admin-bar: 32px;
+  --wp-admin-bar-xs: 46px;
+}
+
+@include media-breakpoint-up(xxl) {
+  :root {
+    --header-max-width: calc(var(--breakpoint-xxl) - calc(var(--padding) * 3.5));
+  }
+}
+

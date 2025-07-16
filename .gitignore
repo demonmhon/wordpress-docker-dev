@@ -20,7 +20,7 @@ Thumbs.db
 .env
 
 # DB
-.db
+db
 
 # Themes
 themes/*

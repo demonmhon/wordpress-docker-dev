@@ -13,19 +13,19 @@ cp .env.sample .env
 Start Docker Compose:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 Stop Docker Compose:
 
 ```bash
-docker-compose stop
+docker compose stop
 ```
 
 Remove Stop Container:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## File structure
@@ -34,19 +34,24 @@ Contain the mount volumes for Docker.
 
 ```
 /
-├── .db
+├── db
 ├── plugins
-├── theme-src
-├── theme
-│   ├── acf
-│   ├── assets
-│   ├── fonts
-│   ├── img
-│   ├── inc
-│   ├── template-parts
-│   └── templates
-│       index.php
-│       style.css
+├── src
+│   ├── js
+│   └── scss
+├── wp-content
+│   ├── plugins
+│   ├── themes
+│   │   ├── acf
+│   │   ├── assets
+│   │   ├── fonts
+│   │   ├── img
+│   │   ├── inc
+│   │   ├── template-parts
+│   │   └── templates
+│   │       index.php
+│   │       style.css
+│   └── uploads
 └── uploads
 ```
 
@@ -54,7 +59,7 @@ Contain the mount volumes for Docker.
 
 After start Docker compose. Then, Open the web browser and follow the installation instruction.
 
-When the WordPress successfully installed. The database will be created and stored locally on `/.db/data`.
+When the WordPress successfully installed. The database will be created and stored locally on `db/`.
 
 ## Required Plugins
 
@@ -88,7 +93,7 @@ Uploads are also ignored by default.
 
 ### Prerequisites
 
-- [Node.js 10.x+](https://nodejs.org/)
+- [Node.js 22.x+](https://nodejs.org/)
 
 ### Start the development
 
@@ -104,11 +109,11 @@ Start the script to compile the assets and watch for the file changes:
 npm start
 ```
 
-Gulp will watch the file on `/theme-src` to compile to JS and CSS.
+[rollup.js](https://rollupjs.org/) will watch the file on `/src` to compile to JS and CSS.
 
 
 ## Bundle
 
-* [FontAwesome 5](https://fontawesome.com/)
-* [Bootstrap 4](https://getbootstrap.com/)
-* [Hamburgers ](https://jonsuh.com/hamburgers/)
+* [FontAwesome](https://fontawesome.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Hamburgers](https://jonsuh.com/hamburgers/)
